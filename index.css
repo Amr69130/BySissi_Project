@@ -1,0 +1,181 @@
+/* Styles pour la section des photos d'accueil */
+.acceuil-photos {
+    background-color: white;
+    padding: 80px;
+}
+
+.acceuil-photos h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: normal; /* Spécifie la valeur normale pour le poids de la police */
+    font-style: normal;
+    margin-bottom: -0.5px;
+    margin-top: -5px;
+}
+
+.acceuil-photos div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Styles pour la section d'introduction */
+.accueil-introduction {
+    display: flex;
+    flex-direction: column; /* Alignement vertical des éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Centre les éléments horizontalement */
+    height: calc(100vh - 100px); /* Hauteur ajustée pour inclure l'espace de l'entête */
+    text-align: center; /* Centre le texte à l'intérieur */
+    margin-top: 20px; /* Marge au-dessus de la section pour l'espacement avec l'entête */
+}
+
+.accueil-introduction h1 {
+    margin-bottom: 10px; /* Réduit l'espace sous le h1 */
+    margin-top: -15px; /* Supprime l'espace au-dessus du h1 */
+}
+
+.accueil-introduction p {
+    margin-bottom: 15px; /* Réduit l'espace sous le paragraphe pour rapprocher l'image */
+}
+
+.accueil-introduction img {
+    margin-top: -60px;
+}
+
+
+.cta_index {  
+    border-radius: 50px;
+    background: linear-gradient(to right, #ffffff, #ef3b36);
+    color: black;
+    padding: 20px 30px;
+    margin-top: 30px; /* Espace au-dessus du bouton pour le séparer de l'image */
+    text-align: center; /* Centre le texte à l'intérieur du bouton */
+}
+
+/* Styles globaux pour les paragraphes */
+p {
+    padding-bottom: 60px;
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: normal; /* Spécifie la valeur normale pour le poids de la police */
+    font-style: normal;
+}
+
+/* Image ronde */
+.arrondi {
+    border-radius: 50%;
+}
+
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.image-container img {
+    margin-right: 10px; /* Espace entre les images */
+    opacity: 0.1; /* Opacité minimale initiale */
+    transition: opacity 0.3s ease-in-out; /* Pour un effet de transition plus fluide */
+}
+.image-container img:nth-child(1) {
+    opacity: 0.1; /* Opacité minimale pour la première image */
+}
+.image-container img:nth-child(2) {
+    opacity: 0.4; /* Opacité augmentée pour la deuxième image */
+}
+.image-container img:nth-child(3) {
+    opacity: 0.6; /* Opacité encore augmentée */
+}
+.image-container img:nth-child(4) {
+    opacity: 0.8;
+}
+.image-container img:nth-child(5) {
+    opacity: 1; /* Pleine opacité pour la dernière image */
+}
+
+legend {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.section-contact h2 {
+    text-align: center;
+    padding-bottom: 60px;
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+    font-weight: normal; /* Spécifie la valeur normale pour le poids de la police */
+    font-style: normal;
+}
+
+:required {
+    background: linear-gradient(to right, #ffffff, #ef3b36);
+}
+
+/* Styles pour le formulaire */
+.form-container {
+    padding: 20px;
+    max-width: 600px; /* Limite la largeur du formulaire pour une meilleure lecture */
+    margin: auto; /* Centre le formulaire horizontalement */
+}
+
+form fieldset {
+    margin-bottom: 20px; /* Espace entre les groupes de champs */
+    border: none; /* Supprime les bordures par défaut du fieldset */
+}
+
+form label, form input, form select, form textarea {
+    display: block;
+    margin-bottom: 10px; /* Espace entre chaque champ de formulaire */
+    width: 100%; /* Assure que les éléments prennent toute la largeur disponible */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+}
+
+form input[type="text"], form input[type="tel"], form input[type="email"], form select, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical; /* Permet seulement le redimensionnement vertical */
+    min-height: 100px; /* Hauteur minimale pour le textarea */
+}
+
+form input[type="submit"] {
+    background-color: #ef3b36;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #d8322f; /* Couleur de fond légèrement plus foncée au survol */
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espace entre le label et le champ */
+    color: #333; /* Couleur de texte du label */
+}
+
+@media screen and (max-width: 996px) {
+    .accueil-introduction {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
