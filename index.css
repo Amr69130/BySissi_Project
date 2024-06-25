@@ -69,6 +69,10 @@ p {
 
 /* Image ronde */
 .arrondi {
+    border-radius: 50px;
+}
+
+.arrondi2 {
     border-radius: 50%;
 }
 
