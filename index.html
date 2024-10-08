@@ -84,16 +84,17 @@
                             </select> 
                             
                             <label for="tel">Numéro Tél :</label>
-                            <input type="tel" name="tel" id="tel" placeholder="Numéro Tél" size="10" maxlength="10" required>
-        
+                            <input type="tel" name="tel" id="tel" placeholder="Numéro Tél" pattern="[0-9]{10}" maxlength="10" required>
+                        
                             <label for="email">Email :</label>
                             <input type="email" name="email" id="email" placeholder="Email" size="30" maxlength="20" required>
                             
                             <label for="description">Décrivez-moi vos envies :</label>
                             <textarea name="description" id="description" placeholder="Description du projet" required></textarea>
-        
+                        
                             <input type="submit" value="Envoyer">
                         </form>
+                        
                     </fieldset>
                 </div>
             </section>

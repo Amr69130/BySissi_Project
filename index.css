@@ -121,7 +121,7 @@ label {
 }
 
 :required {
-    background: linear-gradient(to right, #ffffff, #ef3b36);
+    background: white;
 }
 
 /* Styles pour le formulaire */
