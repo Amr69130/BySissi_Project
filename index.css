@@ -69,6 +69,10 @@ p {
 
 /* Image ronde */
 .arrondi {
+    border-radius: 50px;
+}
+
+.arrondi2 {
     border-radius: 50%;
 }
 
@@ -117,7 +121,7 @@ label {
 }
 
 :required {
-    background: linear-gradient(to right, #ffffff, #ef3b36);
+    background: white;
 }
 
 /* Styles pour le formulaire */
