@@ -79,8 +79,10 @@ p {
 
 .image-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: start;
+  align-content: stretch;
+  justify-content: center;
 }
 .image-container img {
   margin-right: 10px; /* Espace entre les images */
@@ -188,4 +190,8 @@ form label {
     align-items: center;
     justify-content: center;
   }
+}
+
+.lien {
+  font-size: 3vw;
 }
