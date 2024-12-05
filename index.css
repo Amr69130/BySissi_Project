@@ -79,10 +79,8 @@ p {
 
 .image-container {
   display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 .image-container img {
   margin-right: 10px; /* Espace entre les images */
