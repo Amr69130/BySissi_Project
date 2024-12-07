@@ -1,127 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="index.html" class="lien-icone">
-                <img src="images/logo.png" alt="Logo By Sissi" class="arrondi">
-            </a>
-            <div>
-                <a href="index.html">Accueil</a>
-                <a href="a-propos.html">A propos</a>
-                <a href="portfolio.html">Portfolio</a>
-            </div>
-        </nav>
+      <nav>
+        <a href="index.html" class="lien-icone">
+          <img src="images/logo.png" alt="Logo By Sissi" class="arrondi" />
+        </a>
+        <div class="lien">
+          <a href="index.html">Accueil</a>
+          <a href="a-propos.html">A propos</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="portfolio-titre">
-            <h1>Portfolio</h1>
-        </section>
-        <section class="portfolio-section-photos">
-            <h2>Collection personnelle</h2>
-            <div class="grid-personnelle">
-                <!-- Images de la collection personnelle -->
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/perso/bleu.jpg')">
-                    <img src="images/portfolio/perso/bleu.jpg" alt="robe bleue">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/perso/beige.jpg')">
-                    <img src="images/portfolio/perso/beige.jpg" alt="robe beige">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/perso/bleu2.jpg')">
-                    <img src="images/portfolio/perso/bleu2.jpg" alt="robe bleue">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/perso/noir.jpg')">
-                    <img src="images/portfolio/perso/noir.jpg" alt="robe noir">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/perso/noir_blanc.jpg')">
-                    <img src="images/portfolio/perso/noir_blanc.jpg" alt="robe noir et blanche">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/perso/noir2.jpg')">
-                    <img src="images/portfolio/perso/noir2.jpg" alt="robe noir">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-            </div>
-            <h2>Collaboration AMANA BOUTIQUE</h2>
-            <div class="grid-amana">
-                <!-- Images de la collaboration AMANA BOUTIQUE -->
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/noir_or2.jpg')">
-                    <img src="images/portfolio/collab/noir_or2.jpg" alt="robe noir or">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/blanc_noir1.jpg')">
-                    <img src="images/portfolio/collab/blanc_noir1.jpg" alt="robe noir et motifs blancs">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/noir_white1.jpg')">
-                    <img src="images/portfolio/collab/noir_white1.jpg" alt="robe noir et blanche">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/noir_or1.jpg')">
-                    <img src="images/portfolio/collab/noir_or1.jpg" alt="robe noir or">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/blanc_noir2.jpg')">
-                    <img src="images/portfolio/collab/blanc_noir2.jpg" alt="robe noir et motifs blancs">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/noir_white2.jpg')">
-                    <img src="images/portfolio/collab/noir_white2.jpg" alt="robe noir et blanche">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/tout_noir.jpg')">
-                    <img src="images/portfolio/collab/tout_noir.jpg" alt="robe noir">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/froufrou.jpg')">
-                    <img src="images/portfolio/collab/froufrou.jpg" alt="robe à manches froufrou">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-                <a href="javascript:void(0);" class="lien-conteneur-photo" onclick="openModal('images/portfolio/collab/manches_color1.jpg')">
-                    <img src="images/portfolio/collab/manches_color1.jpg" alt="robe noir manches colorées">
-                    <div class="photo-hover">Voir la photo</div>
-                </a>
-            </div>
-            
-            
-        </section>
+      <section class="portfolio-titre">
+        <h1>Portfolio</h1>
+      </section>
+      <section class="portfolio-section-photos">
+        <h2>Collection personnelle</h2>
+        <div class="grid-personnelle">
+          <!-- Images de la collection personnelle -->
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/perso/bleu.jpg')"
+          >
+            <img src="images/portfolio/perso/bleu.jpg" alt="robe bleue" />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/perso/beige.jpg')"
+          >
+            <img src="images/portfolio/perso/beige.jpg" alt="robe beige" />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/perso/bleu2.jpg')"
+          >
+            <img src="images/portfolio/perso/bleu2.jpg" alt="robe bleue" />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/perso/noir.jpg')"
+          >
+            <img src="images/portfolio/perso/noir.jpg" alt="robe noir" />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/perso/noir_blanc.jpg')"
+          >
+            <img
+              src="images/portfolio/perso/noir_blanc.jpg"
+              alt="robe noir et blanche"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/perso/noir2.jpg')"
+          >
+            <img src="images/portfolio/perso/noir2.jpg" alt="robe noir" />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+        </div>
+        <h2>Collaboration AMANA BOUTIQUE</h2>
+        <div class="grid-amana">
+          <!-- Images de la collaboration AMANA BOUTIQUE -->
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/noir_or2.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/noir_or2.jpg"
+              alt="robe noir or"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/blanc_noir1.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/blanc_noir1.jpg"
+              alt="robe noir et motifs blancs"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/noir_white1.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/noir_white1.jpg"
+              alt="robe noir et blanche"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/noir_or1.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/noir_or1.jpg"
+              alt="robe noir or"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/blanc_noir2.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/blanc_noir2.jpg"
+              alt="robe noir et motifs blancs"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/noir_white2.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/noir_white2.jpg"
+              alt="robe noir et blanche"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/tout_noir.jpg')"
+          >
+            <img src="images/portfolio/collab/tout_noir.jpg" alt="robe noir" />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/froufrou.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/froufrou.jpg"
+              alt="robe à manches froufrou"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="lien-conteneur-photo"
+            onclick="openModal('images/portfolio/collab/manches_color1.jpg')"
+          >
+            <img
+              src="images/portfolio/collab/manches_color1.jpg"
+              alt="robe noir manches colorées"
+            />
+            <div class="photo-hover">Voir la photo</div>
+          </a>
+        </div>
+      </section>
     </main>
-    
+
     <!-- Fenêtre modale ajoutée pour l'affichage des images en pop-up -->
     <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
     </div>
 
     <footer>
-        <a href="index.html" class="lien-icone">
-            <img src="images/logo.png" alt="logo by sissi" class="arrondi">
+      <a href="index.html" class="lien-icone">
+        <img src="images/logo.png" alt="logo by sissi" class="arrondi" />
+      </a>
+      <p class="copyright">&copy; 2024 By Sissi. Tous droits réservés.</p>
+      <div>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/bys_issi?igshN3RqOGwzazk5M3U0"
+          class="lien-icone"
+        >
+          <img src="images/instagram.png" alt="logo instagram" />
         </a>
-        <p class="copyright">&copy; 2024 By Sissi. Tous droits réservés.</p>
-        <div>
-            <a target="_blank" href="https://www.instagram.com/bys_issi?igshN3RqOGwzazk5M3U0" class="lien-icone">
-                <img src="images/instagram.png" alt="logo instagram">
-            </a>
-        </div>
+      </div>
     </footer>
 
     <!-- Inclusion du fichier JavaScript -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
