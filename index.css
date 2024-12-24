@@ -184,18 +184,21 @@ form label {
   color: #333; /* Couleur de texte du label */
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 768px) {
   .accueil-introduction {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  header {
+    height: 20vh;
+  }
 }
 
 .lien {
-  font-size: 2vw;
+  font-size: 2vh;
 }
 
 .copyright {
-  font-size: 2vw;
+  font-size: 2vh;
 }

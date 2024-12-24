@@ -101,16 +101,21 @@ table {
   border: 10px solid white;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 768px) {
   .content-wrapper {
+    display: none;
+  }
+
+  #always {
     display: none;
   }
 }
 
 .lien {
-  font-size: 2vw;
+  font-size: 2vh;
 }
 
 .copyright {
-  font-size: 2vw;
+  font-size: 2vh;
 }
+@import url("./shared.css");

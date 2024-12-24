@@ -142,7 +142,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 768px) {
   .grid-personnelle {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -155,9 +155,10 @@
 }
 
 .lien {
-  font-size: 2vw;
+  font-size: 2vh;
 }
 
 .copyright {
-  font-size: 2vw;
+  font-size: 2vh;
 }
+@import url("./shared.css");
