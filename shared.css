@@ -23,123 +23,114 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 5%;
-    background-color: rgb(214, 69, 69);
-
-    img {
-      margin: 1vw;
-    }
-    ul {
-      display: flex;
-      justify-content: space-evenly;
-      margin: 1vw;
-      gap: 1vw;
-    }
+    height: 10%;
+    padding: 2vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("images/one_flower.webp");
+    background-size: cover;
+    background-position: center;
   }
-  main {
-    height: 80%;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1vw;
+    gap: 1vw;
+  }
+}
+main {
+  height: 80%;
 
-    #presentation {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: black;
-      gap: 4vh;
-      padding: 5vh;
+  #presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    gap: 1vh;
+    padding: 5vh;
+    text-align: center;
+    img {
+      opacity: 100%;
+    }
+    #contact {
+      border-radius: 40px;
+      background: linear-gradient(to right, #ffffff, #e2827e);
+      color: black;
+      padding: 10px;
+      margin-top: 30px;
       text-align: center;
     }
-    #pictures {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .title {
-        color: black;
-      }
-      #carousel {
-        display: flex;
-        gap: 0.5vh;
-        animation: slide 200s;
-
-        img {
-          width: 100%;
-          opacity: 100%;
-        }
-      }
-    }
-
-    #project {
-      background-image: url(images/flowers.jpg);
-      background-size: cover;
-      background-position: center;
-      background-color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1vh;
-
-      form {
-        padding: 2vh;
-      }
-      .title {
-        color: black;
-      }
-      label {
-        color: white;
-      }
-    }
   }
-  footer {
+  #pictures {
+    background: linear-gradient(to bottom, #ffffff, #e2827e);
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-    justify-content: space-between;
-    height: 5%;
-    background-color: rgb(214, 69, 69);
-    img {
-      margin: 1vw;
+    padding: 2vh;
+    .title {
+      color: black;
     }
-
-    ul {
+    #carousel {
       display: flex;
-      justify-content: space-evenly;
+
+      gap: 0.5vh;
     }
   }
-  @media screen and (max-width: 576px) {
-    header {
-      display: flex;
-      flex-direction: column;
+
+  #project {
+    background: linear-gradient(to top, #ffffff, #e2827e);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh;
+
+    form {
+      padding: 2vh;
     }
-    main {
-      height: 80%;
+    .title {
+      color: black;
     }
-    footer {
-      height: 10%;
+    label {
+      color: white;
     }
   }
 }
-@keyframes slide {
-  0% {
-    transform: translateX(0);
+footer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  height: 10%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/flowers.jpg");
+  filter: blur(50%);
+  background-size: cover;
+  background-position: center;
+  img {
+    border-radius: 50%;
+    opacity: 80%;
+    margin: 1vw;
   }
-  16.666% {
-    transform: translateX(-100%);
+  p {
+    color: rgb(255, 255, 255);
   }
-  33.333% {
-    transform: translateX(-200%);
+  ul {
+    display: flex;
+    justify-content: space-evenly;
   }
-  50% {
-    transform: translateX(-300%);
+}
+@media screen and (max-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: column;
   }
-  66.666% {
-    transform: translateX(-400%);
-  }
-  83.333% {
-    transform: translateX(-500%);
-  }
-  100% {
-    transform: translateX(0);
+  main {
+    #carousel {
+      display: flex;
+      flex-direction: column;
+    }
+    footer {
+    }
   }
 }
