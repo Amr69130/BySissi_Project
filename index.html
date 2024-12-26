@@ -26,6 +26,7 @@
     />
   </head>
   <body>
+    <!-- LE HEADER -->
     <header>
       <img
         src="images/logo-removebg-preview.png"
@@ -47,21 +48,107 @@
         </ul>
       </nav>
     </header>
+
+    <!-- LE MAIN -->
     <main>
       <section id="presentation">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+          <p>
+            Lorsque la modernité rencontre la tradition... <br />
+            Depuis plus de 10 ans maintenant, j'exerce avec la passion qui
+            m'anime : dessiner puis créer pour vous le meilleur.
+          </p>
+        </div>
+        <div>
+          <img src="images/red_BW.png" alt="photo de robe" class="arrondi2" />
+        </div>
+        <div>
+          <a href="#contact" class="cta_index">UN PROJET ? ÉCRIVEZ-MOI</a>
+        </div>
       </section>
+
       <section id="pictures">
-        <div></div>
-        <div></div>
+        <div class="title">
+          <h2>Mes dernières créations</h2>
+        </div>
+        <div id="carousel">
+          <img src="images/accueil/dress1.png" alt="robe1" />
+          <img src="images/accueil/dress2.png" alt="robe2" />
+          <img src="images/accueil/dress3.png" alt="robe3" />
+          <img src="images/accueil/dress4.png" alt="robe4" />
+          <img src="images/accueil/dress5.png" alt="robe5" />
+          <img src="images/accueil/dress6.png" alt="robe6" />
+        </div>
       </section>
+
       <section id="project">
-        <div></div>
-        <div></div>
+        <div class="title">
+          <h2>Parlons de votre projet</h2>
+        </div>
+        <div>
+          <fieldset>
+            <form method="get" action="">
+              <label for="prenom">Prénom :</label>
+              <input
+                type="text"
+                name="prenom"
+                id="prenom"
+                placeholder="Prénom"
+                size="30"
+                maxlength="20"
+                required
+              />
+              <label for="nom">Nom :</label>
+              <input
+                type="text"
+                name="nom"
+                id="nom"
+                placeholder="Nom"
+                size="30"
+                maxlength="20"
+                required
+              />
+              <label for="âge">Âge :</label>
+              <select name="âge" id="âge" required>
+                <option value="15-25">Entre 15 et 25 ans</option>
+                <option value="25-35">Entre 25 et 35 ans</option>
+                <option value="35-55">Entre 35 et 55 ans</option>
+              </select>
+              <label for="tel">Numéro Tél :</label>
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Numéro Tél"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+              />
+              <label for="email">Email :</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                size="30"
+                maxlength="20"
+                required
+              />
+              <label for="description">Décrivez-moi vos envies :</label>
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Description du projet"
+                required
+              ></textarea>
+              <input type="submit" value="Envoyer" />
+            </form>
+          </fieldset>
+        </div>
       </section>
     </main>
+
+    <!-- LE FOOTER -->
     <footer>
       <img
         src="images/logo-removebg-preview.png"
