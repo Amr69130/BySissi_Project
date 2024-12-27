@@ -126,10 +126,6 @@ footer {
     flex-direction: column;
   }
   main {
-    #carousel {
-      display: flex;
-      flex-direction: column;
-    }
     footer {
     }
   }
