@@ -276,34 +276,11 @@ form label {
 .copyright {
   font-size: 2vh;
 }
-#carousel {
-  display: flex;
-  flex-direction: column;
-}
 
-.carousel-list {
-  display: flex;
-  list-style: none;
-  animation: scroll 20s linear infinite;
-}
-
-.carousel-list li {
-  flex: 0 0 0 100%; /* Ajustez la largeur pour chaque image */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-list img {
-  width: 100%;
-  height: auto;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
+/* ========== Responsive Styles ========== */
+@media screen and (max-width: 768px) {
+  .carousel-list img {
+    max-width: 100%;
+    height: auto;
   }
 }
