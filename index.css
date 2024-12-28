@@ -33,16 +33,24 @@
   .title {
     color: black;
   }
-  #carousel {
-    display: flex;
+}
 
-    gap: 0.5vh;
-    img {
-      height: 50vh;
-      width: auto;
-    }
+/* Si on veut un comportement plus adapté aux petits écrans */
+@media screen and (max-width: 768px) {
+}
+
+/* Animation de défilement de la liste */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Position initiale */
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Décalage vers la gauche pour faire défiler les images */
   }
 }
+
 #a-propos {
   display: flex;
   background-color: black;
@@ -279,8 +287,4 @@ form label {
 
 /* ========== Responsive Styles ========== */
 @media screen and (max-width: 768px) {
-  .carousel-list img {
-    max-width: 100%;
-    height: auto;
-  }
 }
