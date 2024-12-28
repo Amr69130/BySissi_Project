@@ -37,6 +37,10 @@
     display: flex;
 
     gap: 0.5vh;
+    img {
+      height: 50vh;
+      width: auto;
+    }
   }
 }
 #a-propos {
@@ -56,7 +60,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 1vh;
-
+  text-align: center;
   form {
     padding: 2vh;
   }
