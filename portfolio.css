@@ -1,0 +1,163 @@
+/* Styles généraux pour la section portfolio */
+.portfolio-section-photos {
+  background-color: rgb(255, 255, 255);
+  padding: 0 20px;
+  margin-bottom: 15px; /* Espace ajouté avant le footer */
+}
+
+.portfolio-titre h1 {
+  text-align: center;
+
+  color: rgb(0, 0, 0);
+}
+
+.portfolio-section-photos h2 {
+  color: rgb(0, 0, 0);
+  padding-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Styles pour les grilles d'images */
+.grid-amana,
+.grid-personnelle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Styles pour les images */
+.grid-amana img,
+.grid-personnelle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Conteneurs d'images */
+.lien-conteneur-photo {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Hauteur de l'extrait visible */
+  overflow: hidden; /* Cache les parties de l'image qui dépassent */
+}
+
+/* Images dans les conteneurs */
+.lien-conteneur-photo img {
+  width: 100%; /* Couvre la largeur du conteneur */
+  height: auto; /* Garde les proportions de l'image */
+  object-fit: cover; /* Remplit le conteneur tout en gardant les proportions */
+  object-position: top; /* Affiche la partie haute de l'image */
+  position: absolute; /* Positionne l'image absolument dans le conteneur */
+  top: 0; /* Aligne le haut de l'image avec le haut du conteneur */
+  left: 0;
+}
+
+/* Effet de survol */
+.lien-conteneur-photo:hover img {
+  transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+  transition: transform 0.3s ease-in-out; /* Transition fluide */
+}
+
+/* Effet de survol avec texte */
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.lien-conteneur-photo:hover .photo-hover {
+  display: flex;
+}
+
+/* Galerie de miniatures */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail {
+  max-width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Fenêtre modale */
+.modal {
+  display: none; /* Cachée par défaut */
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.modal-content:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-personnelle {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .grid-amana {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.lien {
+  font-size: 2vh;
+}
+
+.copyright {
+  font-size: 2vh;
+}
+@import url("./shared.css");

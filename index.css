@@ -1,14 +1,17 @@
 #presentation {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
+  align-items: flex-end;
+  color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   gap: 1vh;
   padding: 5vh;
-  text-align: center;
+
   img {
     opacity: 100%;
+    text-align: right;
+  }
+  p {
+    text-align: left;
   }
   #contact {
     border-radius: 40px;
@@ -36,7 +39,17 @@
     gap: 0.5vh;
   }
 }
-
+#a-propos {
+  display: flex;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5vh;
+  align-items: center;
+  img {
+    border-radius: 50px;
+  }
+}
 #project {
   background: linear-gradient(to top, #ffffff, #e2827e);
   display: flex;
@@ -258,4 +271,35 @@ form label {
 
 .copyright {
   font-size: 2vh;
+}
+#carousel {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-list {
+  display: flex;
+  list-style: none;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-list li {
+  flex: 0 0 0 100%; /* Ajustez la largeur pour chaque image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-list img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
