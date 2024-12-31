@@ -68,11 +68,3 @@ ul {
   display: flex;
   justify-content: space-evenly;
 }
-
-@media screen and (max-width: 576px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    background-size: contain;
-  }
-}

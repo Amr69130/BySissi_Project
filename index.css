@@ -1,27 +1,23 @@
 #presentation {
   display: flex;
-  align-items: flex-end;
+
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   gap: 1vh;
   padding: 5vh;
-
-  img {
-    opacity: 100%;
-    text-align: right;
-  }
-  p {
-    text-align: left;
-  }
-  #contact {
-    border-radius: 40px;
-    background: linear-gradient(to right, #ffffff, #e2827e);
-    color: black;
-    padding: 10px;
-    margin-top: 30px;
-    text-align: center;
-  }
+  flex-wrap: wrap; /* Pour les écrans petits, permettre au texte de se décaler sous l'image */
 }
+
+#presentation img {
+  width: 100%;
+  text-align: right; /* S'assure que l'image soit responsive */
+}
+
+#presentation p {
+  text-align: left;
+}
+
+/* --- Styles pour les sections de photos ou projets --- */
 #pictures {
   background: linear-gradient(to bottom, #ffffff, #e2827e);
   width: 100%;
@@ -30,93 +26,132 @@
   flex-direction: column;
   align-items: center;
   padding: 1vh;
-  .title {
-    color: black;
-  }
 }
-
-/* Si on veut un comportement plus adapté aux petits écrans */
-@media screen and (max-width: 576px) {
-  header {
-  }
-  #presentation {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #pictures {
-    background: linear-gradient(to bottom, #ffffff, #e2827e);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1vh;
-    .title {
-      color: black;
-    }
-    .carousel-list {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
-/* Mobile small, entre 320px et 480px */
-@media (min-width: 320px) and (max-width: 480px) {
-  #presentation {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #pictures {
-    background: linear-gradient(to bottom, #ffffff, #e2827e);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1vh;
-    .title {
-      color: black;
-    }
-    .carousel-list {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
 #a-propos {
-  display: flex;
   background-color: black;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 5vh;
-  align-items: center;
+  h2 {
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+  p {
+    color: rgb(255, 255, 255);
+    text-align: left;
+  }
   img {
-    border-radius: 50px;
-  }
-}
-#project {
-  background: linear-gradient(to top, #ffffff, #e2827e);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1vh;
-  text-align: center;
-  form {
-    padding: 2vh;
-  }
-  .title {
-    color: black;
-  }
-  label {
-    color: white;
+    border-radius: 50%;
   }
 }
 
-/* Styles pour la section des photos d'accueil */
+#pictures .title {
+  color: black;
+}
+
+/* Section des images ou des projets (grille responsive) */
+.carousel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Par défaut 3 images par ligne */
+  gap: 1rem;
+  width: 100%;
+}
+
+.carousel-list li {
+  width: 100%; /* Chaque image occupe toute la largeur de sa colonne */
+}
+
+/* --- Ajustements pour les écrans de taille moyenne (tablettes et écrans moyens) --- */
+@media (max-width: 1024px) {
+  .carousel-list {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 images par ligne pour les tablettes */
+  }
+}
+
+/* --- Ajustements pour les écrans plus petits (mobiles) --- */
+@media (max-width: 768px) {
+  .carousel-list {
+    grid-template-columns: 1fr; /* 1 image par ligne pour les petits écrans (mobiles) */
+  }
+
+  #presentation {
+    flex-direction: column; /* Le texte se retrouve sous l'image */
+    align-items: center; /* Centre le texte sous l'image */
+    padding: 3vh;
+  }
+
+  #presentation img {
+    width: 80%; /* L'image prendra 80% de la largeur du container */
+    margin-bottom: 20px; /* Ajouter de l'espace entre l'image et le texte */
+  }
+
+  #presentation p {
+    text-align: center;
+    width: 100%;
+    padding: 0 2rem; /* Espacement sur les côtés pour les petits écrans */
+  }
+
+  .carousel-list {
+    padding: 0 2rem; /* Marges internes pour donner de l'espace sur les côtés des écrans petits */
+  }
+}
+
+/* --- Pour écrans très larges (par exemple desktop ou tablettes de grande taille) --- */
+@media (min-width: 1024px) {
+  #presentation {
+    justify-content: space-between; /* Sépare l'image et le texte */
+  }
+
+  #presentation p {
+    font-size: 1.2rem;
+  }
+
+  /* Ajustement du texte dans #a-propos */
+  #a-propos {
+    flex-direction: row;
+    padding: 5vh 10vh;
+    align-items: center;
+  }
+
+  #a-propos img {
+    max-width: 40%;
+  }
+
+  #project {
+    flex-direction: row;
+    padding: 2vh 10vh;
+  }
+
+  #project img {
+    max-width: 45%;
+  }
+
+  #project form {
+    width: 50%; /* Formulaire plus large sur grand écran */
+  }
+}
+
+/* --- Reste du CSS --- */
+
+#presentation {
+  display: flex;
+  align-items: flex-end;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  gap: 1vh;
+  padding: 5vh;
+  flex-wrap: wrap;
+}
+
+#presentation img {
+  width: 100%;
+}
+
+#presentation p {
+  text-align: left;
+}
+
+/* Médias Queries pour la section .acceuil-photos */
 .acceuil-photos {
   background-color: white;
   padding: 80px;
@@ -156,12 +191,12 @@
 }
 
 .accueil-introduction h1 {
-  margin-bottom: 10px; /* Réduit l'espace sous le h1 */
-  margin-top: -15px; /* Supprime l'espace au-dessus du h1 */
+  margin-bottom: 10px;
+  margin-top: -15px;
 }
 
 .accueil-introduction p {
-  margin-bottom: 15px; /* Réduit l'espace sous le paragraphe pour rapprocher l'image */
+  margin-bottom: 15px;
 }
 
 .accueil-introduction img {
@@ -173,8 +208,8 @@
   background: linear-gradient(to right, #ffffff, #ef3b36);
   color: black;
   padding: 20px 30px;
-  margin-top: 30px; /* Espace au-dessus du bouton pour le séparer de l'image */
-  text-align: center; /* Centre le texte à l'intérieur du bouton */
+  margin-top: 30px;
+  text-align: center;
 }
 
 /* Styles globaux pour les paragraphes */
@@ -182,16 +217,8 @@ p {
   padding-bottom: 60px;
   font-family: "Playwrite US Trad", cursive;
   font-optical-sizing: auto;
-  font-weight: normal; /* Spécifie la valeur normale pour le poids de la police */
+  font-weight: normal;
   font-style: normal;
-}
-
-legend {
-  color: white;
-}
-
-label {
-  color: white;
 }
 
 .section-contact h2 {
@@ -199,7 +226,7 @@ label {
   padding-bottom: 60px;
   font-family: "Playwrite US Trad", cursive;
   font-optical-sizing: auto;
-  font-weight: normal; /* Spécifie la valeur normale pour le poids de la police */
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -214,19 +241,14 @@ label {
   margin: auto; /* Centre le formulaire horizontalement */
 }
 
-form fieldset {
-  margin-bottom: 20px; /* Espace entre les groupes de champs */
-  border: none; /* Supprime les bordures par défaut du fieldset */
-}
-
 form label,
 form input,
 form select,
 form textarea {
   display: block;
-  margin-bottom: 10px; /* Espace entre chaque champ de formulaire */
-  width: 100%; /* Assure que les éléments prennent toute la largeur disponible */
-  box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 form input[type="text"],
@@ -241,8 +263,8 @@ form textarea {
 }
 
 form textarea {
-  resize: vertical; /* Permet seulement le redimensionnement vertical */
-  min-height: 100px; /* Hauteur minimale pour le textarea */
+  resize: vertical;
+  min-height: 100px;
 }
 
 form input[type="submit"] {
@@ -256,24 +278,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #d8322f; /* Couleur de fond légèrement plus foncée au survol */
-}
-
-form label {
-  font-weight: bold;
-  margin-bottom: 5px; /* Espace entre le label et le champ */
-  color: #333; /* Couleur de texte du label */
-}
-
-@media screen and (max-width: 576px) {
-  .accueil-introduction {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  header {
-    height: 20vh;
-  }
+  background-color: #d8322f;
 }
 
 .lien {
@@ -282,8 +287,4 @@ form label {
 
 .copyright {
   font-size: 2vh;
-}
-
-/* ========== Responsive Styles ========== */
-@media screen and (max-width: 576px) {
 }

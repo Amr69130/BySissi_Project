@@ -5,12 +5,6 @@
   margin-bottom: 15px; /* Espace ajouté avant le footer */
 }
 
-.portfolio-titre h1 {
-  text-align: center;
-
-  color: rgb(0, 0, 0);
-}
-
 .portfolio-section-photos h2 {
   color: rgb(0, 0, 0);
   padding-top: 20px;
@@ -19,17 +13,32 @@
 }
 
 /* Styles pour les grilles d'images */
-.grid-amana,
-.grid-personnelle {
+.grid-personnelle,
+.grid-amana {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
   gap: 15px;
   background-color: rgb(255, 255, 255);
 }
 
+/* Media queries pour rendre la grille adaptative */
+@media (max-width: 768px) {
+  .grid-personnelle,
+  .grid-amana {
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-personnelle,
+  .grid-amana {
+    grid-template-columns: 1fr; /* Une colonne */
+  }
+}
+
 /* Styles pour les images */
-.grid-amana img,
-.grid-personnelle img {
+.grid-personnelle img,
+.grid-amana img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -140,24 +149,3 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-@media screen and (max-width: 768px) {
-  .grid-personnelle {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .grid-amana {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-}
-
-.lien {
-  font-size: 2vh;
-}
-
-.copyright {
-  font-size: 2vh;
-}
-@import url("./shared.css");
