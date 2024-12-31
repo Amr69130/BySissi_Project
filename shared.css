@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin: 1vw;
-    gap: 1vw;
+    gap: 3vw;
   }
 }
 main {

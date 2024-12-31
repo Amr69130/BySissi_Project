@@ -70,38 +70,40 @@
 
 /* --- Ajustements pour les écrans plus petits (mobiles) --- */
 @media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    img {
+      display: none;
+    }
+  }
   .carousel-list {
     grid-template-columns: 1fr; /* 1 image par ligne pour les petits écrans (mobiles) */
   }
 
   #presentation {
-    flex-direction: column; /* Le texte se retrouve sous l'image */
-    align-items: center; /* Centre le texte sous l'image */
-    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   #presentation img {
-    width: 80%; /* L'image prendra 80% de la largeur du container */
-    margin-bottom: 20px; /* Ajouter de l'espace entre l'image et le texte */
+    width: 100%; /* L'image prendra 80% de la largeur du container */
+    margin-bottom: 2vh; /* Ajouter de l'espace entre l'image et le texte */
   }
 
   #presentation p {
-    text-align: center;
-    width: 100%;
-    padding: 0 2rem; /* Espacement sur les côtés pour les petits écrans */
   }
 
   .carousel-list {
     padding: 0 2rem; /* Marges internes pour donner de l'espace sur les côtés des écrans petits */
   }
   #a-propos {
-    flex-direction: row;
-    padding: 5vh 10vh;
+    display: flex;
+    flex-direction: column;
+
+    padding: 10vh 10vh;
     align-items: center;
-    img {
-      height: 70%;
-      width: auto;
-    }
   }
 }
 
