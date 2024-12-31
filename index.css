@@ -94,6 +94,15 @@
   .carousel-list {
     padding: 0 2rem; /* Marges internes pour donner de l'espace sur les côtés des écrans petits */
   }
+  #a-propos {
+    flex-direction: row;
+    padding: 5vh 10vh;
+    align-items: center;
+    img {
+      height: 70%;
+      width: auto;
+    }
+  }
 }
 
 /* --- Pour écrans très larges (par exemple desktop ou tablettes de grande taille) --- */
